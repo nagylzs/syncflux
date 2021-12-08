@@ -1,0 +1,6 @@
+__pycache__/
+syncflux.yml
+nssm.exe
+stderr
+
+stdout

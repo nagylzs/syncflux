@@ -1,0 +1,29 @@
+syncthings:
+  # You can configure multiple syncthing API configurations.
+  # SyncFlux will query all of them.
+  my_laptop:
+    # You can get the key in the Actions/Advanced/GUI menu in SyncThing
+    api_key: '******'
+    host: 'localhost'
+    #port: 8384
+    #timeout: 10.0
+    is_https: false
+    # ssl_cert_file: "/some/file.cert"
+    # You can add a list of strings here - that will be added to data points as tags (sent to InfluxDb)
+    # tags: []
+influxes:
+  # You can specify multiple InfluxDb configurations.
+  # All measurements will be sent to all configured InfluxDb instances.
+  default:
+    host: "influxdb.example.com"
+    port: 443
+    ssl: true
+    verify_ssl: true
+    database: "syncthing"
+    username: "syncthing"
+    password: "******"
+measurements:
+  # Name of the measurement for storing device "last seen (sec)" values
+  devices: "syncthing_device"
+  # Name of the measurement for storing folder "completion percent" values
+  folders: "syncthing_folder"
