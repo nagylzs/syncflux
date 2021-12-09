@@ -1,0 +1,13 @@
+[Unit]
+Description=Syncflux service
+After=network.target
+StartLimitIntervalSec=0
+[Service]
+Type=simple
+Restart=always
+RestartSec=1
+User=syncflux
+ExecStart=/docker/syncflux/run
+
+[Install]
+WantedBy=multi-user.target
