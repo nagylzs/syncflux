@@ -1,4 +1,5 @@
 #!/bin/bash
 
-cd /docker/syncflux
-pipenv run python syncflux.py --count=-1 --wait=300 --silent
+DIR="$(dirname $(realpath $0))"
+cd ${DIR}
+/usr/bin/env pipenv run python syncflux.py --count=-1 --wait=300 --silent
